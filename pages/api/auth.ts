@@ -24,13 +24,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
               // Remove quotes from environment variable if they exist
               let cleanPassword = correctPassword;
               console.log('Before cleaning:', JSON.stringify(cleanPassword));
-              console.log('Starts with quote:', cleanPassword.startsWith('"'));
-              console.log('Ends with quote:', cleanPassword.endsWith('"'));
+              console.log('First char code:', cleanPassword.charCodeAt(0));
+              console.log('Last char code:', cleanPassword.charCodeAt(cleanPassword.length - 1));
               
-              if (cleanPassword.startsWith('"') && cleanPassword.endsWith('"')) {
-                cleanPassword = cleanPassword.slice(1, -1);
-                console.log('After cleaning:', JSON.stringify(cleanPassword));
-              }
+              // Remove quotes using multiple methods
+              cleanPassword = cleanPassword.replace(/^["']|["']$/g, ''); // Remove quotes from start/end
+              cleanPassword = cleanPassword.trim(); // Remove any whitespace
+              
+              console.log('After cleaning:', JSON.stringify(cleanPassword));
               
               console.log('Final comparison:');
               console.log('  Password received:', JSON.stringify(password));
@@ -49,10 +50,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
                     envVarValue: JSON.stringify(process.env.APP_PASSWORD),
                     receivedValue: JSON.stringify(password),
                     cleanPassword: JSON.stringify(cleanPassword),
-                    startsWithQuote: cleanPassword.startsWith('"'),
-                    endsWithQuote: cleanPassword.endsWith('"'),
                     originalLength: correctPassword?.length,
-                    cleanedLength: cleanPassword?.length
+                    cleanedLength: cleanPassword?.length,
+                    firstCharCode: correctPassword?.charCodeAt(0),
+                    lastCharCode: correctPassword?.charCodeAt(correctPassword.length - 1)
                   }
                 });
               }
