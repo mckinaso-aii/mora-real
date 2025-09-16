@@ -22,7 +22,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
               // Remove quotes from environment variable if they exist
-              const cleanPassword = correctPassword.replace(/^"(.*)"$/, '$1');
+              let cleanPassword = correctPassword;
+              if (cleanPassword.startsWith('"') && cleanPassword.endsWith('"')) {
+                cleanPassword = cleanPassword.slice(1, -1);
+              }
               
               if (password === cleanPassword) {
                 res.status(200).json({ success: true });
