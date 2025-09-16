@@ -21,24 +21,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: 'Configuración de servidor incompleta' });
   }
 
-              // Remove quotes from environment variable if they exist
-              let cleanPassword = correctPassword;
-              console.log('Before cleaning:', JSON.stringify(cleanPassword));
-              console.log('First char code:', cleanPassword.charCodeAt(0));
-              console.log('Last char code:', cleanPassword.charCodeAt(cleanPassword.length - 1));
+              console.log('Environment variable (raw):', correctPassword);
+              console.log('Environment variable (JSON):', JSON.stringify(correctPassword));
+              console.log('Password received (raw):', password);
+              console.log('Password received (JSON):', JSON.stringify(password));
+              console.log('Are they equal?', password === correctPassword);
               
-              // Remove quotes using multiple methods
-              cleanPassword = cleanPassword.replace(/^["']|["']$/g, ''); // Remove quotes from start/end
-              cleanPassword = cleanPassword.trim(); // Remove any whitespace
-              
-              console.log('After cleaning:', JSON.stringify(cleanPassword));
-              
-              console.log('Final comparison:');
-              console.log('  Password received:', JSON.stringify(password));
-              console.log('  Clean password:', JSON.stringify(cleanPassword));
-              console.log('  Are they equal?', password === cleanPassword);
-              
-              if (password === cleanPassword) {
+              if (password === correctPassword) {
                 res.status(200).json({ success: true });
               } else {
                 res.status(401).json({
@@ -47,13 +36,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
                     hasEnvVar: !!process.env.APP_PASSWORD,
                     envVarLength: process.env.APP_PASSWORD?.length,
                     receivedLength: password?.length,
-                    envVarValue: JSON.stringify(process.env.APP_PASSWORD),
-                    receivedValue: JSON.stringify(password),
-                    cleanPassword: JSON.stringify(cleanPassword),
-                    originalLength: correctPassword?.length,
-                    cleanedLength: cleanPassword?.length,
+                    envVarValue: process.env.APP_PASSWORD,
+                    receivedValue: password,
+                    envVarJson: JSON.stringify(process.env.APP_PASSWORD),
+                    receivedJson: JSON.stringify(password),
                     firstCharCode: correctPassword?.charCodeAt(0),
-                    lastCharCode: correctPassword?.charCodeAt(correctPassword.length - 1)
+                    lastCharCode: correctPassword?.charCodeAt(correctPassword.length - 1),
+                    receivedFirstCharCode: password?.charCodeAt(0),
+                    receivedLastCharCode: password?.charCodeAt(password.length - 1)
                   }
                 });
               }
