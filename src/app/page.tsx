@@ -1,18 +1,30 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import Link from 'next/link'
 import { 
   ChartBarIcon, 
   CogIcon, 
   DocumentChartBarIcon,
   BuildingOfficeIcon,
-  CurrencyDollarIcon
+  CurrencyDollarIcon,
+  GlobeAltIcon
 } from '@heroicons/react/24/outline'
 
 export default function HomePage() {
   const [isAuthenticated, setIsAuthenticated] = useState(false)
   const [password, setPassword] = useState('')
   const [isLoading, setIsLoading] = useState(false)
+  const [isCheckingAuth, setIsCheckingAuth] = useState(true)
+
+  // Check for existing authentication on component mount
+  useEffect(() => {
+    const savedAuth = localStorage.getItem('mora-real-auth')
+    if (savedAuth === 'true') {
+      setIsAuthenticated(true)
+    }
+    setIsCheckingAuth(false)
+  }, [])
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -29,6 +41,7 @@ export default function HomePage() {
 
       if (response.ok) {
         setIsAuthenticated(true)
+        localStorage.setItem('mora-real-auth', 'true')
       } else {
         alert('Contraseña incorrecta')
       }
@@ -37,6 +50,19 @@ export default function HomePage() {
     } finally {
       setIsLoading(false)
     }
+  }
+
+  if (isCheckingAuth) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-purple-900 to-purple-600">
+        <div className="glass-effect rounded-2xl p-8 w-full max-w-md mx-4">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-400 mx-auto mb-4"></div>
+            <p className="text-white/80">Verificando autenticación...</p>
+          </div>
+        </div>
+      </div>
+    )
   }
 
   if (!isAuthenticated) {
@@ -92,7 +118,10 @@ export default function HomePage() {
               <p className="text-white/80 text-sm">Reporte de Inteligencia de Negocio</p>
             </div>
             <button
-              onClick={() => setIsAuthenticated(false)}
+              onClick={() => {
+                setIsAuthenticated(false)
+                localStorage.removeItem('mora-real-auth')
+              }}
               className="text-white/60 hover:text-white transition-colors"
             >
               Cerrar Sesión
@@ -115,7 +144,7 @@ export default function HomePage() {
         </div>
 
         {/* Overview Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           <div className="roi-card">
             <div className="flex items-center mb-4">
               <BuildingOfficeIcon className="h-8 w-8 text-purple-400 mr-3" />
@@ -145,11 +174,24 @@ export default function HomePage() {
               Propuesta de implementación de IA y automatización para optimizar eficiencia
             </p>
           </div>
+
+          <Link href="/sitio-web" className="roi-card group cursor-pointer">
+            <div className="flex items-center mb-4">
+              <GlobeAltIcon className="h-8 w-8 text-purple-400 mr-3" />
+              <h3 className="text-xl font-semibold text-white">Sitio Web Profesional</h3>
+            </div>
+            <p className="text-white/70">
+              Propuesta de web integrada estilo clinicabiblica.com con BI y automatización
+            </p>
+            <div className="text-purple-400 font-medium group-hover:text-purple-300 transition-colors mt-2">
+              Ver Propuesta →
+            </div>
+          </Link>
         </div>
 
         {/* Navigation Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="roi-card group cursor-pointer">
+          <Link href="/analisis-flujo" className="roi-card group cursor-pointer">
             <div className="flex items-center mb-4">
               <DocumentChartBarIcon className="h-10 w-10 text-purple-400 mr-4" />
               <h3 className="text-2xl font-semibold text-white">Análisis de Flujo de Trabajo</h3>
@@ -161,9 +203,9 @@ export default function HomePage() {
             <div className="text-purple-400 font-medium group-hover:text-purple-300 transition-colors">
               Ver Análisis →
             </div>
-          </div>
+          </Link>
 
-          <div className="roi-card group cursor-pointer">
+          <Link href="/propuesta-roi" className="roi-card group cursor-pointer">
             <div className="flex items-center mb-4">
               <CurrencyDollarIcon className="h-10 w-10 text-purple-400 mr-4" />
               <h3 className="text-2xl font-semibold text-white">Propuesta de Solución ROI</h3>
@@ -175,7 +217,7 @@ export default function HomePage() {
             <div className="text-purple-400 font-medium group-hover:text-purple-300 transition-colors">
               Ver Propuesta →
             </div>
-          </div>
+          </Link>
         </div>
 
         {/* Footer */}
