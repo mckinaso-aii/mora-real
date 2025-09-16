@@ -23,9 +23,19 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
               // Remove quotes from environment variable if they exist
               let cleanPassword = correctPassword;
+              console.log('Before cleaning:', JSON.stringify(cleanPassword));
+              console.log('Starts with quote:', cleanPassword.startsWith('"'));
+              console.log('Ends with quote:', cleanPassword.endsWith('"'));
+              
               if (cleanPassword.startsWith('"') && cleanPassword.endsWith('"')) {
                 cleanPassword = cleanPassword.slice(1, -1);
+                console.log('After cleaning:', JSON.stringify(cleanPassword));
               }
+              
+              console.log('Final comparison:');
+              console.log('  Password received:', JSON.stringify(password));
+              console.log('  Clean password:', JSON.stringify(cleanPassword));
+              console.log('  Are they equal?', password === cleanPassword);
               
               if (password === cleanPassword) {
                 res.status(200).json({ success: true });
@@ -38,7 +48,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
                     receivedLength: password?.length,
                     envVarValue: JSON.stringify(process.env.APP_PASSWORD),
                     receivedValue: JSON.stringify(password),
-                    cleanPassword: JSON.stringify(cleanPassword)
+                    cleanPassword: JSON.stringify(cleanPassword),
+                    startsWithQuote: cleanPassword.startsWith('"'),
+                    endsWithQuote: cleanPassword.endsWith('"'),
+                    originalLength: correctPassword?.length,
+                    cleanedLength: cleanPassword?.length
                   }
                 });
               }
