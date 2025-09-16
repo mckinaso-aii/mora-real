@@ -183,7 +183,7 @@ export default function PropuestaROIPage() {
             <div className="text-center mb-8">
               <h2 className="text-3xl font-bold text-white mb-4">Comparativo Cortex vs Neural</h2>
               <p className="text-xl text-white/80 max-w-3xl mx-auto">
-                Plan Neural: Dental + Farmacia (escalable a especialistas) vs Plan Cortex: Solo dental
+                Cortex: Mejoras dentales inmediatas vs Neural: Dental + escalabilidad a centro médico completo
               </p>
             </div>
 
@@ -200,7 +200,7 @@ export default function PropuestaROIPage() {
                 </div>
 
                 <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-white mb-3">Soluciones Inmediatas:</h4>
+                  <h4 className="text-lg font-semibold text-white mb-3">Mejoras Dentales Inmediatas:</h4>
                   <div className="space-y-3">
                     <div className="p-3 bg-white/10 rounded-lg">
                       <div className="flex items-start">
@@ -277,7 +277,7 @@ export default function PropuestaROIPage() {
                 </div>
 
                 <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-white mb-3">Soluciones Completas:</h4>
+                  <h4 className="text-lg font-semibold text-white mb-3">Dental + Centro Médico Completo:</h4>
                   <div className="space-y-3">
                     <div className="p-3 bg-white/10 rounded-lg">
                       <div className="flex items-start">
@@ -369,13 +369,13 @@ export default function PropuestaROIPage() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-blue-400 mb-2">Cortex</div>
-                  <div className="text-white/80 mb-2">ROI Limitado</div>
-                  <div className="text-sm text-white/60">No resuelve agenda, lista de espera ni proveeduría</div>
+                  <div className="text-white/80 mb-2">Solo Dental</div>
+                  <div className="text-sm text-white/60">Mejoras básicas, sin escalabilidad</div>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-purple-400 mb-2">Neural</div>
-                  <div className="text-white/80 mb-2">ROI Completo</div>
-                  <div className="text-sm text-white/60">Ataca directamente los pain points más caros</div>
+                  <div className="text-white/80 mb-2">Dental + Centro Médico</div>
+                  <div className="text-sm text-white/60">Escalabilidad completa a su negocio</div>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-green-400 mb-2">Diferencia</div>
