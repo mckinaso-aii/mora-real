@@ -13,7 +13,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   // Debug logging (remove in production)
   console.log('Debug - APP_PASSWORD exists:', !!process.env.APP_PASSWORD);
   console.log('Debug - APP_PASSWORD length:', process.env.APP_PASSWORD?.length);
+  console.log('Debug - APP_PASSWORD value:', JSON.stringify(process.env.APP_PASSWORD));
   console.log('Debug - Received password length:', password?.length);
+  console.log('Debug - Received password value:', JSON.stringify(password));
   
   if (!correctPassword) {
     return res.status(500).json({ error: 'Configuración de servidor incompleta' });
@@ -27,7 +29,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       debug: {
         hasEnvVar: !!process.env.APP_PASSWORD,
         envVarLength: process.env.APP_PASSWORD?.length,
-        receivedLength: password?.length
+        receivedLength: password?.length,
+        envVarValue: JSON.stringify(process.env.APP_PASSWORD),
+        receivedValue: JSON.stringify(password)
       }
     });
   }
