@@ -430,7 +430,7 @@ export default function PropuestaROIPage() {
                   <h4 className="text-lg font-semibold text-green-400 mb-4">✅ Soluciones Neural</h4>
                   
                   <div className="p-3 bg-green-500/10 border border-green-500/30 rounded-lg">
-                    <div className="text-white font-medium text-sm mb-1">WhatsApp Bot Automático</div>
+                    <div className="text-white font-medium text-sm mb-1">AI Conversacional WhatsApp Automático</div>
                     <div className="text-green-300 text-xs">→ Ahorro inmediato: $240/mes</div>
                   </div>
                   
@@ -461,7 +461,7 @@ export default function PropuestaROIPage() {
                   <h4 className="text-lg font-semibold text-white mb-2">ROI Inmediato por Solución</h4>
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
                     <div>
-                      <div className="text-white/60 mb-1">WhatsApp Bot</div>
+                      <div className="text-white/60 mb-1">AI Conversacional WhatsApp</div>
                       <div className="text-green-400 font-bold">$240/mes</div>
                     </div>
                     <div>
@@ -596,7 +596,7 @@ export default function PropuestaROIPage() {
                   </div>
                   <div className="flex items-start">
                     <span className="text-green-400 mr-2">✓</span>
-                    <span className="text-white/80 text-sm">WhatsApp bot para sus pacientes</span>
+                    <span className="text-white/80 text-sm">AI conversacional WhatsApp para sus pacientes</span>
                   </div>
                   <div className="flex items-start">
                     <span className="text-green-400 mr-2">✓</span>
@@ -757,7 +757,7 @@ export default function PropuestaROIPage() {
                   </div>
                   <div className="flex items-start">
                     <span className="text-green-400 mr-2">✓</span>
-                    <span className="text-white/80">WhatsApp bot para todos los pacientes del centro</span>
+                    <span className="text-white/80">AI conversacional WhatsApp para todos los pacientes del centro</span>
                   </div>
                   <div className="flex items-start">
                     <span className="text-green-400 mr-2">✓</span>
@@ -921,7 +921,7 @@ export default function PropuestaROIPage() {
                       <span className="text-white text-xs">✓</span>
                     </div>
                     <div>
-                      <h4 className="text-white font-semibold mb-1">WhatsApp Bot Automático</h4>
+                      <h4 className="text-white font-semibold mb-1">AI Conversacional WhatsApp Automático</h4>
                       <p className="text-white/70 text-sm">Sin cobros por mensaje, confirmación automática</p>
                     </div>
                   </div>

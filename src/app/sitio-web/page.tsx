@@ -57,7 +57,7 @@ export default function SitioWebPage() {
 
   const integrations = [
     {
-      name: "WhatsApp Bot",
+      name: "AI Conversacional WhatsApp",
       description: "Recordatorios automáticos y confirmación de citas",
       benefit: "Reduce no-shows en 40%"
     },
@@ -399,7 +399,7 @@ export default function SitioWebPage() {
                     <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center mx-auto">
                       <span className="text-white text-sm font-bold">2</span>
                     </div>
-                    <h4 className="text-white font-semibold text-sm">WhatsApp Bot</h4>
+                    <h4 className="text-white font-semibold text-sm">AI Conversacional WhatsApp</h4>
                     <p className="text-white/70 text-xs">Recordatorio automático</p>
                   </div>
                   <div className="space-y-2">
@@ -467,7 +467,7 @@ export default function SitioWebPage() {
                     </li>
                     <li className="flex items-start">
                       <span className="text-green-400 mr-2">✓</span>
-                      <span className="text-white/80 text-sm">WhatsApp bot sin cobros por mensaje</span>
+                      <span className="text-white/80 text-sm">AI conversacional WhatsApp sin cobros por mensaje</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-green-400 mr-2">✓</span>

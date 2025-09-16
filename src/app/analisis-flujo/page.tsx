@@ -37,7 +37,7 @@ export default function AnalisisFlujoPage() {
 
   const proposedWorkflow = `
     graph TD
-      A[Paciente solicita cita] --> B[WhatsApp Bot automático]
+      A[Paciente solicita cita] --> B[AI Conversacional WhatsApp automático]
       B --> C[Agenda centralizada Odoo]
       C --> D[Recordatorio automático WhatsApp]
       D --> E[Confirmación/cancelación automática]
@@ -119,7 +119,7 @@ export default function AnalisisFlujoPage() {
 
   const automations = [
     {
-      title: "Bot WhatsApp Automático",
+      title: "AI Conversacional WhatsApp Automático",
       description: "Recordatorios automáticos con confirmación/cancelación",
       savings: "1.5h/día secretaria",
       value: "$240/mes",
@@ -322,7 +322,7 @@ export default function AnalisisFlujoPage() {
                   </div>
                   <div className="flex items-start">
                     <span className="text-green-400 mr-2">✓</span>
-                    <span className="text-white/80">WhatsApp bot sirve a pacientes de todas las especialidades</span>
+                    <span className="text-white/80">AI conversacional WhatsApp sirve a pacientes de todas las especialidades</span>
                   </div>
                 </div>
               </div>
@@ -418,7 +418,7 @@ export default function AnalisisFlujoPage() {
                   <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center mr-3">
                     <span className="text-white text-sm font-bold">✓</span>
                   </div>
-                  <h3 className="text-lg font-semibold text-white">WhatsApp Bot Automático</h3>
+                  <h3 className="text-lg font-semibold text-white">AI Conversacional WhatsApp Automático</h3>
                 </div>
                 <p className="text-white/70 mb-2">Recordatorios automáticos con confirmación/cancelación</p>
                 <p className="text-green-400 font-semibold">Ahorro: 1.5h/día secretaria</p>
