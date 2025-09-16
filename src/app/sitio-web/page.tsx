@@ -34,8 +34,8 @@ export default function SitioWebPage() {
       },
       {
         title: "Servicios",
-        description: "Catálogo completo de servicios médicos y especialidades",
-        features: ["Filtros por especialidad", "Información detallada", "Precios transparentes"]
+        description: "Catálogo completo de servicios médicos, especialidades y farmacia",
+        features: ["Filtros por especialidad", "Información detallada", "Precios transparentes", "Farmacia integrada"]
       },
       {
         title: "Agenda Online",
@@ -44,8 +44,8 @@ export default function SitioWebPage() {
       },
       {
         title: "Nosotros",
-        description: "Información del equipo médico y especialistas",
-        features: ["Perfiles profesionales", "Certificaciones", "Experiencia"]
+        description: "Información del equipo médico, especialistas y Dra. Dunia Mora",
+        features: ["Perfiles profesionales", "Certificaciones", "Experiencia", "Equipo completo"]
       },
       {
         title: "Contacto",
@@ -173,7 +173,7 @@ export default function SitioWebPage() {
             <div className="text-center mb-8">
               <h2 className="text-3xl font-bold text-white mb-4">Sitio Web Actual</h2>
               <p className="text-xl text-white/80 max-w-3xl mx-auto">
-                Wix básico sin integración que limita el crecimiento del negocio
+                Wix básico sin integración que limita el crecimiento del centro médico
               </p>
             </div>
 
@@ -249,7 +249,7 @@ export default function SitioWebPage() {
             <div className="text-center mb-8">
               <h2 className="text-3xl font-bold text-white mb-4">Sitio Web Profesional Propuesto</h2>
               <p className="text-xl text-white/80 max-w-3xl mx-auto">
-                Next.js moderno con 5 secciones integradas y estilo clinicabiblica.com
+                Next.js moderno con 5 secciones integradas para centro médico completo
               </p>
             </div>
 

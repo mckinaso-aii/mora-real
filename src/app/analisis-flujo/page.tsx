@@ -245,7 +245,7 @@ export default function AnalisisFlujoPage() {
             <div className="text-center mb-6 sm:mb-8 px-4">
               <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">Flujo de Trabajo Actual</h2>
               <p className="text-lg sm:text-xl text-white/80 max-w-3xl mx-auto">
-                Procesos manuales que generan ineficiencias y costos operativos elevados
+                Enfoque inicial en operación dental de Dra. Dunia Mora - procesos manuales que generan ineficiencias y costos operativos elevados
               </p>
             </div>
 
@@ -307,7 +307,7 @@ export default function AnalisisFlujoPage() {
             <div className="text-center mb-8">
               <h2 className="text-3xl font-bold text-white mb-4">Flujo de Trabajo Propuesto</h2>
               <p className="text-xl text-white/80 max-w-3xl mx-auto">
-                Automatización completa con ERP Odoo y WhatsApp integrado
+                Automatización completa con ERP Odoo y WhatsApp integrado - escalable a todo el centro médico
               </p>
             </div>
 
@@ -386,7 +386,7 @@ export default function AnalisisFlujoPage() {
             <div className="text-center mb-8">
               <h2 className="text-3xl font-bold text-white mb-4">Pain Points Identificados</h2>
               <p className="text-xl text-white/80 max-w-3xl mx-auto">
-                Problemas críticos que afectan la eficiencia y rentabilidad
+                Problemas críticos en operación dental que afectan eficiencia y rentabilidad - base para escalar a todo el centro
               </p>
             </div>
 

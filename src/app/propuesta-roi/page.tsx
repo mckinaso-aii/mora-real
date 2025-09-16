@@ -18,11 +18,11 @@ export default function PropuestaROIPage() {
       "Análisis inicial con hasta 3 documentos"
     ],
     limitations: [
-      "No incluye múltiples áreas ni conectores",
+      "Solo 1 departamento (dental únicamente)",
+      "No escalable a farmacia ni especialistas",
+      "KPIs estáticos, no adaptativos",
       "No resuelve duplicidad de agenda",
-      "No resuelve lista de espera",
-      "Web limitada, sin BI adaptativo",
-      "No incluye ERP completo"
+      "No incluye ERP completo ni integraciones"
     ],
     roi: {
       monthly: 1200,
@@ -36,7 +36,8 @@ export default function PropuestaROIPage() {
     price: 1495,
     maintenance: 395,
     features: [
-      "Dashboard adaptativo (12 KPIs, 2 áreas)",
+      "Dashboard adaptativo (12 KPIs, 2 áreas: Dental + Farmacia)",
+      "Escalable a múltiples especialistas",
       "2-3 automatizaciones: WhatsApp, auto-fill, digest",
       "Web profesional (5 secciones) tipo clinicabiblica.com",
       "Odoo ERP/CRM empresarial con 15 usuarios",
@@ -182,7 +183,7 @@ export default function PropuestaROIPage() {
             <div className="text-center mb-8">
               <h2 className="text-3xl font-bold text-white mb-4">Comparativo Cortex vs Neural</h2>
               <p className="text-xl text-white/80 max-w-3xl mx-auto">
-                Análisis detallado de ambos planes y su impacto en los pain points
+                Plan Neural: Dental + Farmacia (escalable a especialistas) vs Plan Cortex: Solo dental
               </p>
             </div>
 
@@ -193,6 +194,9 @@ export default function PropuestaROIPage() {
                   <h3 className="text-2xl font-bold text-white mb-2">Plan Cortex</h3>
                   <div className="text-3xl font-bold text-blue-400 mb-2">$795/mes</div>
                   <div className="text-white/60">+ $195/mes mantenimiento</div>
+                  <div className="mt-2 px-3 py-1 bg-orange-500/20 border border-orange-500/50 rounded-full">
+                    <span className="text-orange-400 text-sm font-medium">Compromiso mínimo: 3 meses</span>
+                  </div>
                 </div>
 
                 <div className="mb-6">
@@ -237,6 +241,9 @@ export default function PropuestaROIPage() {
                   <h3 className="text-2xl font-bold text-white mb-2">Plan Neural</h3>
                   <div className="text-3xl font-bold text-purple-400 mb-2">$1,495/mes</div>
                   <div className="text-white/60">+ $395/mes mantenimiento</div>
+                  <div className="mt-2 px-3 py-1 bg-purple-500/20 border border-purple-500/50 rounded-full">
+                    <span className="text-purple-400 text-sm font-medium">Compromiso mínimo: 6 meses</span>
+                  </div>
                 </div>
 
                 <div className="mb-6">
@@ -305,6 +312,130 @@ export default function PropuestaROIPage() {
                   <div className="text-2xl font-bold text-green-400 mb-2">Diferencia</div>
                   <div className="text-white/80 mb-2">$1,550/mes</div>
                   <div className="text-sm text-white/60">ROI adicional con Neural vs Cortex</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Commitment Terms Section */}
+            <div className="roi-card bg-gradient-to-r from-orange-900/30 to-purple-900/30 border border-orange-500/30">
+              <div className="text-center mb-6">
+                <h3 className="text-2xl font-bold text-white mb-4">Términos de Compromiso</h3>
+                <p className="text-white/80 text-lg">
+                  Los compromisos mínimos son importantes para garantizar el ROI y la estabilidad del proyecto
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="text-center p-4 bg-orange-500/10 rounded-lg border border-orange-500/30">
+                  <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <span className="text-white text-xl font-bold">3</span>
+                  </div>
+                  <h4 className="text-lg font-semibold text-white mb-2">Plan Cortex</h4>
+                  <p className="text-white/70 text-sm mb-3">Compromiso mínimo: 3 meses</p>
+                  <div className="text-xs text-white/60">
+                    <p className="mb-1">• Inversión total: $2,970</p>
+                    <p className="mb-1">• ROI esperado: $1,215</p>
+                    <p>• Tiempo de recuperación: 2.4 meses</p>
+                  </div>
+                </div>
+
+                <div className="text-center p-4 bg-purple-500/10 rounded-lg border border-purple-500/30">
+                  <div className="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <span className="text-white text-xl font-bold">6</span>
+                  </div>
+                  <h4 className="text-lg font-semibold text-white mb-2">Plan Neural</h4>
+                  <p className="text-white/70 text-sm mb-3">Compromiso mínimo: 6 meses</p>
+                  <div className="text-xs text-white/60">
+                    <p className="mb-1">• Inversión total: $11,340</p>
+                    <p className="mb-1">• ROI esperado: $11,730</p>
+                    <p>• Tiempo de recuperación: 3.3 meses</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-6 p-4 bg-white/10 rounded-lg">
+                <h4 className="text-lg font-semibold text-white mb-3">¿Por qué estos compromisos?</h4>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                  <div className="flex items-start">
+                    <span className="text-orange-400 mr-2">•</span>
+                    <span className="text-white/80">Garantiza tiempo suficiente para implementar y optimizar</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-orange-400 mr-2">•</span>
+                    <span className="text-white/80">Permite recuperar la inversión inicial en desarrollo</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-orange-400 mr-2">•</span>
+                    <span className="text-white/80">Asegura estabilidad para el equipo de desarrollo</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-orange-400 mr-2">•</span>
+                    <span className="text-white/80">Facilita la escalabilidad a especialistas y farmacia</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Scaling Benefits Section */}
+            <div className="roi-card bg-gradient-to-r from-purple-900/50 to-blue-900/50 border border-purple-500/50">
+              <div className="text-center mb-6">
+                <h3 className="text-2xl font-bold text-white mb-4">¿Por qué Neural es Estratégico?</h3>
+                <p className="text-white/80 text-lg">
+                  El Plan Neural no solo optimiza la operación dental, sino que prepara el centro médico completo para el futuro
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <span className="text-white text-xl font-bold">1</span>
+                  </div>
+                  <h4 className="text-lg font-semibold text-white mb-2">Fase 1: Dental</h4>
+                  <p className="text-white/70 text-sm">
+                    Dra. Dunia optimiza citas, recordatorios y expedientes. ROI inmediato de 2-3X.
+                  </p>
+                </div>
+
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <span className="text-white text-xl font-bold">2</span>
+                  </div>
+                  <h4 className="text-lg font-semibold text-white mb-2">Fase 2: Farmacia</h4>
+                  <p className="text-white/70 text-sm">
+                    Módulo de inventario y BI integrado. Mejora márgenes y reduce desperdicios.
+                  </p>
+                </div>
+
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <span className="text-white text-xl font-bold">3</span>
+                  </div>
+                  <h4 className="text-lg font-semibold text-white mb-2">Fase 3: Especialistas</h4>
+                  <p className="text-white/70 text-sm">
+                    Misma infraestructura sirve múltiples doctores. Eficiencias multiplicadas.
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-6 p-4 bg-white/10 rounded-lg">
+                <h4 className="text-lg font-semibold text-white mb-3">Beneficios Compartidos:</h4>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="flex items-start">
+                    <span className="text-green-400 mr-2">✓</span>
+                    <span className="text-white/80 text-sm">Recepción unificada para todos los especialistas</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-green-400 mr-2">✓</span>
+                    <span className="text-white/80 text-sm">Agenda centralizada evita conflictos</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-green-400 mr-2">✓</span>
+                    <span className="text-white/80 text-sm">WhatsApp bot sirve a todos los pacientes</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-green-400 mr-2">✓</span>
+                    <span className="text-white/80 text-sm">BI dashboard muestra todo el centro médico</span>
+                  </div>
                 </div>
               </div>
             </div>

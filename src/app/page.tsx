@@ -140,8 +140,8 @@ export default function HomePage() {
             Análisis de <span className="mora-text">ROI</span> y Oportunidades
           </h2>
           <p className="text-lg sm:text-xl text-white/80 max-w-3xl mx-auto">
-            Evaluación integral del flujo de trabajo actual y propuesta de soluciones 
-            de automatización e inteligencia artificial para optimizar operaciones
+            Evaluación integral del centro médico Salud Mora Real S.A. con enfoque inicial en 
+            optimización dental y escalabilidad a múltiples especialistas y farmacia
           </p>
         </div>
 
@@ -153,7 +153,7 @@ export default function HomePage() {
               <h3 className="text-xl font-semibold text-white">Centro Médico</h3>
             </div>
             <p className="text-white/70">
-              Análisis del flujo de trabajo actual del centro médico, farmacia y consultorios subarrendados
+              Salud Mora Real S.A. - Centro médico integral con múltiples especialistas, farmacia y operación dental principal
             </p>
           </div>
 
