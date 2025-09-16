@@ -200,15 +200,45 @@ export default function PropuestaROIPage() {
                 </div>
 
                 <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-white mb-3">Características Incluidas:</h4>
-                  <ul className="space-y-2">
-                    {cortexPlan.features.map((feature, index) => (
-                      <li key={index} className="flex items-start">
+                  <h4 className="text-lg font-semibold text-white mb-3">Soluciones Inmediatas:</h4>
+                  <div className="space-y-3">
+                    <div className="p-3 bg-white/10 rounded-lg">
+                      <div className="flex items-start">
                         <span className="text-green-400 mr-2">✓</span>
-                        <span className="text-white/80 text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
+                        <div>
+                          <div className="text-white font-medium text-sm">Dashboard con 5 KPIs</div>
+                          <div className="text-white/60 text-xs">→ Resuelve: Visibilidad básica de citas e ingresos</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="p-3 bg-white/10 rounded-lg">
+                      <div className="flex items-start">
+                        <span className="text-green-400 mr-2">✓</span>
+                        <div>
+                          <div className="text-white font-medium text-sm">1 Automatización WhatsApp</div>
+                          <div className="text-white/60 text-xs">→ Resuelve: Recordatorios manuales (ahorro $240/mes)</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="p-3 bg-white/10 rounded-lg">
+                      <div className="flex items-start">
+                        <span className="text-green-400 mr-2">✓</span>
+                        <div>
+                          <div className="text-white font-medium text-sm">Web Simple (3 páginas)</div>
+                          <div className="text-white/60 text-xs">→ Resuelve: Presencia online básica</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="p-3 bg-white/10 rounded-lg">
+                      <div className="flex items-start">
+                        <span className="text-green-400 mr-2">✓</span>
+                        <div>
+                          <div className="text-white font-medium text-sm">Odoo Gratuito (1 módulo)</div>
+                          <div className="text-white/60 text-xs">→ Resuelve: Gestión básica de pacientes</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
                 <div className="mb-6">
@@ -247,15 +277,54 @@ export default function PropuestaROIPage() {
                 </div>
 
                 <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-white mb-3">Características Incluidas:</h4>
-                  <ul className="space-y-2">
-                    {neuralPlan.features.map((feature, index) => (
-                      <li key={index} className="flex items-start">
+                  <h4 className="text-lg font-semibold text-white mb-3">Soluciones Completas:</h4>
+                  <div className="space-y-3">
+                    <div className="p-3 bg-white/10 rounded-lg">
+                      <div className="flex items-start">
                         <span className="text-green-400 mr-2">✓</span>
-                        <span className="text-white/80 text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
+                        <div>
+                          <div className="text-white font-medium text-sm">Dashboard 12 KPIs (Dental + Farmacia)</div>
+                          <div className="text-white/60 text-xs">→ Resuelve: Visibilidad completa + inventario farmacia</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="p-3 bg-white/10 rounded-lg">
+                      <div className="flex items-start">
+                        <span className="text-green-400 mr-2">✓</span>
+                        <div>
+                          <div className="text-white font-medium text-sm">WhatsApp + Auto-fill + Digest</div>
+                          <div className="text-white/60 text-xs">→ Resuelve: Recordatorios + lista espera + reportes (ahorro $600/mes)</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="p-3 bg-white/10 rounded-lg">
+                      <div className="flex items-start">
+                        <span className="text-green-400 mr-2">✓</span>
+                        <div>
+                          <div className="text-white font-medium text-sm">Web Profesional (5 secciones)</div>
+                          <div className="text-white/60 text-xs">→ Resuelve: Presencia profesional + agenda online</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="p-3 bg-white/10 rounded-lg">
+                      <div className="flex items-start">
+                        <span className="text-green-400 mr-2">✓</span>
+                        <div>
+                          <div className="text-white font-medium text-sm">Odoo Empresarial (15 usuarios)</div>
+                          <div className="text-white/60 text-xs">→ Resuelve: ERP completo + escalabilidad a 11 especialistas</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="p-3 bg-white/10 rounded-lg">
+                      <div className="flex items-start">
+                        <span className="text-green-400 mr-2">✓</span>
+                        <div>
+                          <div className="text-white font-medium text-sm">Escalabilidad Completa</div>
+                          <div className="text-white/60 text-xs">→ Resuelve: Preparación para crecimiento del centro médico</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
                 <div className="mb-6">
@@ -312,6 +381,101 @@ export default function PropuestaROIPage() {
                   <div className="text-2xl font-bold text-green-400 mb-2">Diferencia</div>
                   <div className="text-white/80 mb-2">$1,550/mes</div>
                   <div className="text-sm text-white/60">ROI adicional con Neural vs Cortex</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Pain Points vs Solutions Mapping */}
+            <div className="roi-card bg-gradient-to-r from-red-900/30 to-green-900/30 border border-red-500/30">
+              <div className="text-center mb-6">
+                <h3 className="text-2xl font-bold text-white mb-4">Problemas → Soluciones Directas</h3>
+                <p className="text-white/80 text-lg">
+                  Cada pain point identificado tiene una solución específica con ROI medible
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                {/* Pain Points */}
+                <div className="space-y-4">
+                  <h4 className="text-lg font-semibold text-red-400 mb-4">🚨 Problemas Actuales</h4>
+                  
+                  <div className="p-3 bg-red-500/10 border border-red-500/30 rounded-lg">
+                    <div className="text-white font-medium text-sm mb-1">Recordatorios Manuales WhatsApp</div>
+                    <div className="text-red-300 text-xs">1-2 horas/día secretaria = $240/mes</div>
+                  </div>
+                  
+                  <div className="p-3 bg-red-500/10 border border-red-500/30 rounded-lg">
+                    <div className="text-white font-medium text-sm mb-1">Duplicidad de Agenda</div>
+                    <div className="text-red-300 text-xs">Outlook + Dentalink = conflictos y pérdida de citas</div>
+                  </div>
+                  
+                  <div className="p-3 bg-red-500/10 border border-red-500/30 rounded-lg">
+                    <div className="text-white font-medium text-sm mb-1">Lista de Espera Manual</div>
+                    <div className="text-red-300 text-xs">Huecos no aprovechados = pérdida de ingresos</div>
+                  </div>
+                  
+                  <div className="p-3 bg-red-500/10 border border-red-500/30 rounded-lg">
+                    <div className="text-white font-medium text-sm mb-1">Control Inventario Excel</div>
+                    <div className="text-red-300 text-xs">Desperdicios y falta de alertas predictivas</div>
+                  </div>
+                  
+                  <div className="p-3 bg-red-500/10 border border-red-500/30 rounded-lg">
+                    <div className="text-white font-medium text-sm mb-1">Sitio Web Básico</div>
+                    <div className="text-red-300 text-xs">Wix sin integración = oportunidades perdidas</div>
+                  </div>
+                </div>
+
+                {/* Solutions */}
+                <div className="space-y-4">
+                  <h4 className="text-lg font-semibold text-green-400 mb-4">✅ Soluciones Neural</h4>
+                  
+                  <div className="p-3 bg-green-500/10 border border-green-500/30 rounded-lg">
+                    <div className="text-white font-medium text-sm mb-1">WhatsApp Bot Automático</div>
+                    <div className="text-green-300 text-xs">→ Ahorro inmediato: $240/mes</div>
+                  </div>
+                  
+                  <div className="p-3 bg-green-500/10 border border-green-500/30 rounded-lg">
+                    <div className="text-white font-medium text-sm mb-1">Agenda Centralizada Odoo</div>
+                    <div className="text-green-300 text-xs">→ Elimina conflictos + recupera citas perdidas</div>
+                  </div>
+                  
+                  <div className="p-3 bg-green-500/10 border border-green-500/30 rounded-lg">
+                    <div className="text-white font-medium text-sm mb-1">Auto-fill Lista Espera</div>
+                    <div className="text-green-300 text-xs">→ Aprovecha 100% de huecos disponibles</div>
+                  </div>
+                  
+                  <div className="p-3 bg-green-500/10 border border-green-500/30 rounded-lg">
+                    <div className="text-white font-medium text-sm mb-1">BI Dashboard + Alertas</div>
+                    <div className="text-green-300 text-xs">→ Reduce desperdicios + optimiza inventario</div>
+                  </div>
+                  
+                  <div className="p-3 bg-green-500/10 border border-green-500/30 rounded-lg">
+                    <div className="text-white font-medium text-sm mb-1">Web Profesional Integrada</div>
+                    <div className="text-green-300 text-xs">→ Agenda online + WhatsApp directo</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-6 p-4 bg-white/10 rounded-lg">
+                <div className="text-center">
+                  <h4 className="text-lg font-semibold text-white mb-2">ROI Inmediato por Solución</h4>
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
+                    <div>
+                      <div className="text-white/60 mb-1">WhatsApp Bot</div>
+                      <div className="text-green-400 font-bold">$240/mes</div>
+                    </div>
+                    <div>
+                      <div className="text-white/60 mb-1">Agenda Centralizada</div>
+                      <div className="text-green-400 font-bold">$400/mes</div>
+                    </div>
+                    <div>
+                      <div className="text-white/60 mb-1">Lista Espera Auto</div>
+                      <div className="text-green-400 font-bold">$300/mes</div>
+                    </div>
+                  </div>
+                  <div className="mt-3 text-lg font-semibold text-white">
+                    Total Ahorro Mensual: <span className="text-green-400">$940/mes</span>
+                  </div>
                 </div>
               </div>
             </div>
