@@ -1,19 +1,19 @@
 # Changelog - Mora Real S.A. BI Report
 
-## [0.1.0] - 2024-12-19
+## [0.3.0] - 2024-12-19
 
 ### Agregado
-- Estructura inicial del proyecto Next.js
-- Sistema de autenticación con contraseña
-- Tema duotone personalizado (púrpura/blanco)
-- Diseño mobile-first responsive
-- Soporte completo para idioma español
-- Página principal con navegación
-- Estructura de documentación
-- Configuración de TypeScript
-- Configuración de Tailwind CSS
-- Estilos globales con efectos glass y hover
-- Componentes base para visualizaciones
+- Análisis completo de flujo de trabajo actual y propuesto
+- Visualizaciones Mermaid para diagramas de procesos
+- Propuesta de solución ROI con planes Cortex vs Neural
+- Enfoque estratégico: Dental → Centro Médico completo
+- Análisis de 11 especialistas médicos del centro
+- Identificación de pain points críticos por prioridad
+- Automatizaciones propuestas con ROI específico
+- Sitio web profesional integrado con BI
+- Términos de compromiso (3 meses Cortex, 6 meses Neural)
+- Persistencia de autenticación con localStorage
+- Optimización móvil completa en todas las páginas
 
 ### Configuración
 - Next.js 14 con App Router
@@ -44,8 +44,13 @@
 - Estructura para visualizaciones de ROI
 - Base para análisis de flujo de trabajo
 
+### Cambios Importantes
+- **Messaging Consistente**: Cortex = dental improvements only, Neural = dental + medical center scalability
+- **Enfoque Estratégico**: Dra. Dunia optimiza SU negocio dental primero, luego escala a SU centro médico
+- **ROI Clarificado**: Términos de compromiso y mantenimiento claramente definidos
+- **Escalabilidad**: Sistema preparado para gestionar 11 especialistas del centro médico
+
 ### Próximas Versiones
-- [0.2.0] Integración de datos y visualizaciones
-- [0.3.0] Análisis de flujo de trabajo
-- [0.4.0] Propuesta de solución ROI
-- [0.5.0] Finalización y entrega
+- [0.4.0] Integración de datasets reales proporcionados
+- [0.5.0] Validación de métricas con datos actuales
+- [1.0.0] Finalización y entrega del proyecto completo

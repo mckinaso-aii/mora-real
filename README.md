@@ -1,20 +1,22 @@
 # Mora Real S.A. - Reporte de Inteligencia de Negocio
 
-Un análisis integral de ROI y oportunidades de automatización para Mora Real S.A., un centro médico con farmacia y consultorios subarrendados.
+Un análisis integral de ROI y oportunidades de automatización para Salud Mora Real S.A., un centro médico con farmacia y 11 especialistas, con enfoque estratégico en optimización dental y escalabilidad completa.
 
 ## 🏥 Sobre el Proyecto
 
-Este proyecto proporciona una evaluación completa del flujo de trabajo actual de Mora Real S.A., identificando cuellos de botella y proponiendo soluciones de automatización e inteligencia artificial para optimizar las operaciones del centro médico.
+Este proyecto proporciona una evaluación completa del flujo de trabajo actual de Salud Mora Real S.A., identificando cuellos de botella en la operación dental y proponiendo soluciones escalables (Cortex vs Neural) para optimizar tanto la práctica dental como las operaciones del centro médico completo.
 
 ## ✨ Características
 
-- **Análisis de Flujo de Trabajo**: Visualización detallada de procesos actuales
-- **Identificación de Cuellos de Botella**: Detección de áreas problemáticas
-- **Propuesta de Solución ROI**: Plan de implementación con análisis de retorno
+- **Análisis de Flujo de Trabajo**: Visualización detallada de procesos actuales y propuestos
+- **Identificación de Cuellos de Botella**: Detección de áreas problemáticas por prioridad
+- **Propuesta de Solución ROI**: Planes Cortex (dental) vs Neural (dental + centro médico)
+- **Enfoque Estratégico**: Optimización dental → escalabilidad a centro médico completo
 - **Diseño Mobile-First**: Optimizado para dispositivos móviles
 - **Tema Duotone**: Diseño moderno con colores púrpura y blanco
 - **Idioma Español**: Contenido completamente en español
 - **Efectos Glass**: Interfaz moderna con efectos de cristal y hover
+- **Visualizaciones Mermaid**: Diagramas interactivos de procesos
 
 ## 🚀 Tecnologías
 
@@ -89,20 +91,22 @@ El proyecto utiliza un sistema de autenticación simple con contraseña:
 ## 📊 Funcionalidades Principales
 
 ### 1. Análisis de Flujo de Trabajo
-- Visualización de procesos actuales
-- Identificación de cuellos de botella
-- Mapeo de departamentos (médico, farmacia, dental, especialistas)
+- Visualización de procesos actuales vs propuestos
+- Identificación de cuellos de botella por prioridad
+- Mapeo de operación dental y centro médico completo
+- Análisis de 11 especialistas médicos
 
 ### 2. Propuesta de Solución ROI
-- Análisis de costos vs beneficios
-- Plan de implementación por fases
-- Recomendación de planes de aii.cr/es/pricing
+- Planes Cortex (dental) vs Neural (dental + centro médico)
+- Análisis de costos vs beneficios con términos de compromiso
+- Enfoque estratégico por fases: Dental → Centro Médico
+- ROI escalado para gestión completa del centro
 
 ### 3. Visualizaciones Interactivas
-- Gráficos de eficiencia
-- Diagramas de flujo
-- Métricas de ROI
-- Análisis comparativo
+- Diagramas Mermaid de procesos actuales y propuestos
+- Métricas de ROI específicas por solución
+- Análisis comparativo de planes
+- Dashboard de KPIs para centro médico
 
 ## 🎨 Diseño y Tema
 
