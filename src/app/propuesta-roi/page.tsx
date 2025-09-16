@@ -408,11 +408,11 @@ export default function PropuestaROIPage() {
 
                 <div className="text-center">
                   <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <span className="text-white text-xl font-bold">3</span>
+                    <span className="text-white text-xl font-bold">11</span>
                   </div>
-                  <h4 className="text-lg font-semibold text-white mb-2">Fase 3: Especialistas</h4>
+                  <h4 className="text-lg font-semibold text-white mb-2">Fase 3: 11 Especialistas</h4>
                   <p className="text-white/70 text-sm">
-                    Misma infraestructura sirve múltiples doctores. Eficiencias multiplicadas.
+                    Misma infraestructura sirve 11 doctores especializados. Eficiencias multiplicadas por 11.
                   </p>
                 </div>
               </div>
@@ -422,19 +422,27 @@ export default function PropuestaROIPage() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="flex items-start">
                     <span className="text-green-400 mr-2">✓</span>
-                    <span className="text-white/80 text-sm">Recepción unificada para todos los especialistas</span>
+                    <span className="text-white/80 text-sm">Recepción unificada para 11 especialistas</span>
                   </div>
                   <div className="flex items-start">
                     <span className="text-green-400 mr-2">✓</span>
-                    <span className="text-white/80 text-sm">Agenda centralizada evita conflictos</span>
+                    <span className="text-white/80 text-sm">Agenda centralizada evita conflictos entre especialistas</span>
                   </div>
                   <div className="flex items-start">
                     <span className="text-green-400 mr-2">✓</span>
-                    <span className="text-white/80 text-sm">WhatsApp bot sirve a todos los pacientes</span>
+                    <span className="text-white/80 text-sm">WhatsApp bot sirve pacientes de todas las especialidades</span>
                   </div>
                   <div className="flex items-start">
                     <span className="text-green-400 mr-2">✓</span>
-                    <span className="text-white/80 text-sm">BI dashboard muestra todo el centro médico</span>
+                    <span className="text-white/80 text-sm">BI dashboard muestra todo el centro médico completo</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-green-400 mr-2">✓</span>
+                    <span className="text-white/80 text-sm">ERP compartido reduce costos administrativos</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-green-400 mr-2">✓</span>
+                    <span className="text-white/80 text-sm">Escalabilidad: mismo costo, 11x más pacientes</span>
                   </div>
                 </div>
               </div>
@@ -534,6 +542,83 @@ export default function PropuestaROIPage() {
                   <div className="text-3xl font-bold text-green-400 mb-2">$2,700-4,300/mes</div>
                   <div className="text-white/60">vs Inversión Neural $1,495/mes</div>
                   <div className="text-xl font-bold text-purple-400 mt-2">ROI Neto: 2X-3X mensual</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Scaling ROI Section */}
+            <div className="roi-card bg-gradient-to-r from-green-900/30 to-blue-900/30 border border-green-500/30">
+              <div className="text-center mb-6">
+                <h3 className="text-2xl font-bold text-white mb-4">ROI Escalado: Potencial Completo</h3>
+                <p className="text-white/80 text-lg">
+                  Proyección de ROI cuando el Plan Neural se extienda a los 11 especialistas del centro médico
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="text-center p-4 bg-white/10 rounded-lg">
+                  <div className="text-3xl font-bold text-green-400 mb-2">11x</div>
+                  <h4 className="text-lg font-semibold text-white mb-2">Especialistas</h4>
+                  <p className="text-white/70 text-sm">Múltiples especialidades médicas</p>
+                </div>
+                <div className="text-center p-4 bg-white/10 rounded-lg">
+                  <div className="text-3xl font-bold text-blue-400 mb-2">$37,950</div>
+                  <h4 className="text-lg font-semibold text-white mb-2">ROI Mensual</h4>
+                  <p className="text-white/70 text-sm">$3,450 × 11 especialistas</p>
+                </div>
+                <div className="text-center p-4 bg-white/10 rounded-lg">
+                  <div className="text-3xl font-bold text-purple-400 mb-2">$455,400</div>
+                  <h4 className="text-lg font-semibold text-white mb-2">ROI Anual</h4>
+                  <p className="text-white/70 text-sm">ROI total del centro médico</p>
+                </div>
+              </div>
+
+              <div className="mt-6 p-4 bg-white/10 rounded-lg">
+                <h4 className="text-lg font-semibold text-white mb-3">Beneficios Adicionales de Escalabilidad:</h4>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                  <div className="flex items-start">
+                    <span className="text-green-400 mr-2">✓</span>
+                    <span className="text-white/80">Agenda centralizada evita conflictos entre especialistas</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-green-400 mr-2">✓</span>
+                    <span className="text-white/80">WhatsApp bot único para todo el centro</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-green-400 mr-2">✓</span>
+                    <span className="text-white/80">ERP compartido reduce costos administrativos</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-green-400 mr-2">✓</span>
+                    <span className="text-white/80">BI dashboard unificado para toma de decisiones</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-green-400 mr-2">✓</span>
+                    <span className="text-white/80">Farmacia integrada con inventario inteligente</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-green-400 mr-2">✓</span>
+                    <span className="text-white/80">Costo fijo, ingresos escalables</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-4 p-4 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-lg border border-green-500/30">
+                <div className="text-center">
+                  <h4 className="text-xl font-bold text-white mb-2">Inversión vs Retorno</h4>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <div className="text-sm text-white/60 mb-1">Inversión Total (6 meses)</div>
+                      <div className="text-2xl font-bold text-orange-400">$11,340</div>
+                    </div>
+                    <div>
+                      <div className="text-sm text-white/60 mb-1">ROI Total (6 meses)</div>
+                      <div className="text-2xl font-bold text-green-400">$227,700</div>
+                    </div>
+                  </div>
+                  <div className="mt-3 text-lg font-semibold text-white">
+                    Retorno de Inversión: <span className="text-green-400">2,007%</span>
+                  </div>
                 </div>
               </div>
             </div>

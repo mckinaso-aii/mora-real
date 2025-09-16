@@ -249,6 +249,85 @@ export default function AnalisisFlujoPage() {
               </p>
             </div>
 
+            {/* Medical Team Overview */}
+            <div className="roi-card bg-gradient-to-r from-blue-900/30 to-purple-900/30 border border-blue-500/30 mb-8">
+              <div className="text-center mb-6">
+                <h3 className="text-2xl font-bold text-white mb-4">Equipo Médico Completo</h3>
+                <p className="text-white/80 text-lg">
+                  Salud Mora Real S.A. cuenta con 11 especialistas médicos - potencial de escalabilidad significativo
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div className="text-center p-3 bg-white/10 rounded-lg">
+                  <div className="text-lg font-semibold text-white mb-1">Dra. Diana Mora Elizondo</div>
+                  <div className="text-sm text-blue-400">Fisioterapia Dermatofuncional</div>
+                </div>
+                <div className="text-center p-3 bg-white/10 rounded-lg">
+                  <div className="text-lg font-semibold text-white mb-1">Dra. Seidy Elizondo Aguilar</div>
+                  <div className="text-sm text-blue-400">Psicóloga</div>
+                </div>
+                <div className="text-center p-3 bg-white/10 rounded-lg">
+                  <div className="text-lg font-semibold text-white mb-1">Dr. Javier Flores Caravaca</div>
+                  <div className="text-sm text-blue-400">Pediatra</div>
+                </div>
+                <div className="text-center p-3 bg-white/10 rounded-lg">
+                  <div className="text-lg font-semibold text-white mb-1">Dr. José Guillermo Jiménez Montero</div>
+                  <div className="text-sm text-blue-400">Endocrinólogo</div>
+                </div>
+                <div className="text-center p-3 bg-white/10 rounded-lg">
+                  <div className="text-lg font-semibold text-white mb-1">Dra. Karla Astua Quesada</div>
+                  <div className="text-sm text-blue-400">Médico General</div>
+                </div>
+                <div className="text-center p-3 bg-white/10 rounded-lg">
+                  <div className="text-lg font-semibold text-white mb-1">Dra. Monserrat Gómez Brenes</div>
+                  <div className="text-sm text-blue-400">Médico General</div>
+                </div>
+                <div className="text-center p-3 bg-white/10 rounded-lg">
+                  <div className="text-lg font-semibold text-white mb-1">Dr. William Campos Montero</div>
+                  <div className="text-sm text-blue-400">Nefrólogo / Internista</div>
+                </div>
+                <div className="text-center p-3 bg-white/10 rounded-lg">
+                  <div className="text-lg font-semibold text-white mb-1">Dr. Norbel Roman Garita</div>
+                  <div className="text-sm text-blue-400">Geriatra / Neurólogo</div>
+                </div>
+                <div className="text-center p-3 bg-white/10 rounded-lg">
+                  <div className="text-lg font-semibold text-white mb-1">Dra. María Fernanda Blanco Arguedas</div>
+                  <div className="text-sm text-blue-400">Nutricionista</div>
+                </div>
+                <div className="text-center p-3 bg-white/10 rounded-lg">
+                  <div className="text-lg font-semibold text-white mb-1">Dra. Grizka Ledezma Cubero</div>
+                  <div className="text-sm text-blue-400">Fisiatra</div>
+                </div>
+                <div className="text-center p-3 bg-white/10 rounded-lg">
+                  <div className="text-lg font-semibold text-white mb-1">Dr. Josue Mora Hidalgo</div>
+                  <div className="text-sm text-blue-400">Ginecólogo</div>
+                </div>
+              </div>
+
+              <div className="mt-6 p-4 bg-white/10 rounded-lg">
+                <h4 className="text-lg font-semibold text-white mb-3">Impacto en Escalabilidad:</h4>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                  <div className="flex items-start">
+                    <span className="text-green-400 mr-2">✓</span>
+                    <span className="text-white/80">11 especialistas = 11x potencial de citas automatizadas</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-green-400 mr-2">✓</span>
+                    <span className="text-white/80">Múltiples especialidades = diversificación de ingresos</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-green-400 mr-2">✓</span>
+                    <span className="text-white/80">Agenda centralizada evita conflictos entre especialistas</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-green-400 mr-2">✓</span>
+                    <span className="text-white/80">WhatsApp bot sirve a pacientes de todas las especialidades</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <div className="roi-card">
               <div className="bg-white/5 rounded-lg p-6">
                 <div className="text-center mb-4">
