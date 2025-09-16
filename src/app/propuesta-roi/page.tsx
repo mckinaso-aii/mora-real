@@ -193,7 +193,7 @@ export default function PropuestaROIPage() {
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">Plan Cortex</h3>
                   <div className="text-3xl font-bold text-blue-400 mb-2">$795/mes</div>
-                  <div className="text-white/60">+ $195/mes mantenimiento</div>
+                  <div className="text-white/60">+ $195/mes mantenimiento (después de 3 meses)</div>
                   <div className="mt-2 px-3 py-1 bg-orange-500/20 border border-orange-500/50 rounded-full">
                     <span className="text-orange-400 text-sm font-medium">Compromiso mínimo: 3 meses</span>
                   </div>
@@ -270,7 +270,7 @@ export default function PropuestaROIPage() {
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-2">Plan Neural</h3>
                   <div className="text-3xl font-bold text-purple-400 mb-2">$1,495/mes</div>
-                  <div className="text-white/60">+ $395/mes mantenimiento</div>
+                  <div className="text-white/60">+ $395/mes mantenimiento (después de 6 meses)</div>
                   <div className="mt-2 px-3 py-1 bg-purple-500/20 border border-purple-500/50 rounded-full">
                     <span className="text-purple-400 text-sm font-medium">Compromiso mínimo: 6 meses</span>
                   </div>
@@ -499,7 +499,8 @@ export default function PropuestaROIPage() {
                   <div className="text-xs text-white/60">
                     <p className="mb-1">• Inversión total: $2,970</p>
                     <p className="mb-1">• ROI esperado: $1,215</p>
-                    <p>• Tiempo de recuperación: 2.4 meses</p>
+                    <p className="mb-1">• Tiempo de recuperación: 2.4 meses</p>
+                    <p>• Mantenimiento: $195/mes (después de 3 meses)</p>
                   </div>
                 </div>
 
@@ -512,7 +513,8 @@ export default function PropuestaROIPage() {
                   <div className="text-xs text-white/60">
                     <p className="mb-1">• Inversión total: $11,340</p>
                     <p className="mb-1">• ROI esperado: $11,730</p>
-                    <p>• Tiempo de recuperación: 3.3 meses</p>
+                    <p className="mb-1">• Tiempo de recuperación: 3.3 meses</p>
+                    <p>• Mantenimiento: $395/mes (después de 6 meses)</p>
                   </div>
                 </div>
               </div>
@@ -540,12 +542,12 @@ export default function PropuestaROIPage() {
               </div>
             </div>
 
-            {/* Scaling Benefits Section */}
+            {/* Strategic Phased Approach */}
             <div className="roi-card bg-gradient-to-r from-purple-900/50 to-blue-900/50 border border-purple-500/50">
               <div className="text-center mb-6">
-                <h3 className="text-2xl font-bold text-white mb-4">¿Por qué Neural es Estratégico?</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">Enfoque Estratégico por Fases</h3>
                 <p className="text-white/80 text-lg">
-                  El Plan Neural no solo optimiza la operación dental, sino que prepara el centro médico completo para el futuro
+                  Optimización inmediata de su negocio dental + preparación para operaciones del centro médico
                 </p>
               </div>
 
@@ -554,9 +556,9 @@ export default function PropuestaROIPage() {
                   <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-3">
                     <span className="text-white text-xl font-bold">1</span>
                   </div>
-                  <h4 className="text-lg font-semibold text-white mb-2">Fase 1: Dental</h4>
+                  <h4 className="text-lg font-semibold text-white mb-2">Fase 1: Su Negocio Dental</h4>
                   <p className="text-white/70 text-sm">
-                    Dra. Dunia optimiza citas, recordatorios y expedientes. ROI inmediato de 2-3X.
+                    Dra. Dunia optimiza SU operación dental: citas, recordatorios, expedientes. ROI inmediato 2-3X en SU negocio.
                   </p>
                 </div>
 
@@ -564,50 +566,59 @@ export default function PropuestaROIPage() {
                   <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-3">
                     <span className="text-white text-xl font-bold">2</span>
                   </div>
-                  <h4 className="text-lg font-semibold text-white mb-2">Fase 2: Farmacia</h4>
+                  <h4 className="text-lg font-semibold text-white mb-2">Fase 2: Operaciones del Centro</h4>
                   <p className="text-white/70 text-sm">
-                    Módulo de inventario y BI integrado. Mejora márgenes y reduce desperdicios.
+                    Extiende a farmacia y recepción del centro médico. Mejora márgenes y eficiencia operativa general.
                   </p>
                 </div>
 
                 <div className="text-center">
                   <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <span className="text-white text-xl font-bold">11</span>
+                    <span className="text-white text-xl font-bold">3</span>
                   </div>
-                  <h4 className="text-lg font-semibold text-white mb-2">Fase 3: 11 Especialistas</h4>
+                  <h4 className="text-lg font-semibold text-white mb-2">Fase 3: Integración Completa</h4>
                   <p className="text-white/70 text-sm">
-                    Misma infraestructura sirve 11 doctores especializados. Eficiencias multiplicadas por 11.
+                    Sistema unificado para todo el centro médico. Misma infraestructura, múltiples fuentes de ingresos.
                   </p>
                 </div>
               </div>
 
               <div className="mt-6 p-4 bg-white/10 rounded-lg">
-                <h4 className="text-lg font-semibold text-white mb-3">Beneficios Compartidos:</h4>
+                <h4 className="text-lg font-semibold text-white mb-3">Beneficios para Su Negocio:</h4>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="flex items-start">
                     <span className="text-green-400 mr-2">✓</span>
-                    <span className="text-white/80 text-sm">Recepción unificada para 11 especialistas</span>
+                    <span className="text-white/80 text-sm">ROI inmediato en su operación dental</span>
                   </div>
                   <div className="flex items-start">
                     <span className="text-green-400 mr-2">✓</span>
-                    <span className="text-white/80 text-sm">Agenda centralizada evita conflictos entre especialistas</span>
+                    <span className="text-white/80 text-sm">Control total de agenda y pacientes</span>
                   </div>
                   <div className="flex items-start">
                     <span className="text-green-400 mr-2">✓</span>
-                    <span className="text-white/80 text-sm">WhatsApp bot sirve pacientes de todas las especialidades</span>
+                    <span className="text-white/80 text-sm">WhatsApp bot para sus pacientes</span>
                   </div>
                   <div className="flex items-start">
                     <span className="text-green-400 mr-2">✓</span>
-                    <span className="text-white/80 text-sm">BI dashboard muestra todo el centro médico completo</span>
+                    <span className="text-white/80 text-sm">Dashboard de SU rendimiento dental</span>
                   </div>
                   <div className="flex items-start">
                     <span className="text-green-400 mr-2">✓</span>
-                    <span className="text-white/80 text-sm">ERP compartido reduce costos administrativos</span>
+                    <span className="text-white/80 text-sm">Base para expandir a farmacia y recepción</span>
                   </div>
                   <div className="flex items-start">
                     <span className="text-green-400 mr-2">✓</span>
-                    <span className="text-white/80 text-sm">Escalabilidad: mismo costo, 11x más pacientes</span>
+                    <span className="text-white/80 text-sm">Escalabilidad sin costo adicional</span>
                   </div>
+                </div>
+              </div>
+
+              <div className="mt-4 p-4 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-lg border border-purple-500/30">
+                <div className="text-center">
+                  <h4 className="text-lg font-semibold text-white mb-2">Inversión Inteligente</h4>
+                  <p className="text-white/80 text-sm">
+                    Comience optimizando SU negocio dental (ROI inmediato), luego expanda a operaciones del centro médico sin costo adicional de infraestructura.
+                  </p>
                 </div>
               </div>
             </div>
