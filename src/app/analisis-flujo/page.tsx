@@ -190,47 +190,51 @@ export default function AnalisisFlujoPage() {
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Tab Navigation */}
-        <div className="mb-8">
-          <div className="flex space-x-1 bg-white/10 rounded-lg p-1">
+        <div className="mb-6 sm:mb-8">
+          <div className="flex flex-wrap gap-1 bg-white/10 rounded-lg p-1">
             <button
               onClick={() => setActiveTab('actual')}
-              className={`flex-1 py-2 px-4 rounded-md text-sm font-medium transition-colors ${
+              className={`flex-1 min-w-0 py-2 px-2 sm:px-4 rounded-md text-xs sm:text-sm font-medium transition-colors ${
                 activeTab === 'actual'
                   ? 'bg-purple-600 text-white'
                   : 'text-white/70 hover:text-white'
               }`}
             >
-              Flujo Actual
+              <span className="hidden sm:inline">Flujo Actual</span>
+              <span className="sm:hidden">Actual</span>
             </button>
             <button
               onClick={() => setActiveTab('propuesto')}
-              className={`flex-1 py-2 px-4 rounded-md text-sm font-medium transition-colors ${
+              className={`flex-1 min-w-0 py-2 px-2 sm:px-4 rounded-md text-xs sm:text-sm font-medium transition-colors ${
                 activeTab === 'propuesto'
                   ? 'bg-purple-600 text-white'
                   : 'text-white/70 hover:text-white'
               }`}
             >
-              Flujo Propuesto
+              <span className="hidden sm:inline">Flujo Propuesto</span>
+              <span className="sm:hidden">Propuesto</span>
             </button>
             <button
               onClick={() => setActiveTab('dolores')}
-              className={`flex-1 py-2 px-4 rounded-md text-sm font-medium transition-colors ${
+              className={`flex-1 min-w-0 py-2 px-2 sm:px-4 rounded-md text-xs sm:text-sm font-medium transition-colors ${
                 activeTab === 'dolores'
                   ? 'bg-purple-600 text-white'
                   : 'text-white/70 hover:text-white'
               }`}
             >
-              Pain Points
+              <span className="hidden sm:inline">Pain Points</span>
+              <span className="sm:hidden">Problemas</span>
             </button>
             <button
               onClick={() => setActiveTab('automatizaciones')}
-              className={`flex-1 py-2 px-4 rounded-md text-sm font-medium transition-colors ${
+              className={`flex-1 min-w-0 py-2 px-2 sm:px-4 rounded-md text-xs sm:text-sm font-medium transition-colors ${
                 activeTab === 'automatizaciones'
                   ? 'bg-purple-600 text-white'
                   : 'text-white/70 hover:text-white'
               }`}
             >
-              Automatizaciones
+              <span className="hidden sm:inline">Automatizaciones</span>
+              <span className="sm:hidden">Auto</span>
             </button>
           </div>
         </div>
@@ -238,9 +242,9 @@ export default function AnalisisFlujoPage() {
         {/* Tab Content */}
         {activeTab === 'actual' && (
           <div className="space-y-8">
-            <div className="text-center mb-8">
-              <h2 className="text-3xl font-bold text-white mb-4">Flujo de Trabajo Actual</h2>
-              <p className="text-xl text-white/80 max-w-3xl mx-auto">
+            <div className="text-center mb-6 sm:mb-8 px-4">
+              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">Flujo de Trabajo Actual</h2>
+              <p className="text-lg sm:text-xl text-white/80 max-w-3xl mx-auto">
                 Procesos manuales que generan ineficiencias y costos operativos elevados
               </p>
             </div>
@@ -267,7 +271,7 @@ export default function AnalisisFlujoPage() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               <div className="roi-card">
                 <div className="flex items-center mb-4">
                   <ClockIcon className="h-8 w-8 text-red-400 mr-3" />
@@ -386,7 +390,7 @@ export default function AnalisisFlujoPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
               {painPoints.map((point, index) => (
                 <div key={index} className="roi-card">
                   <div className="flex items-start justify-between mb-4">
@@ -419,7 +423,7 @@ export default function AnalisisFlujoPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
               {automations.map((automation, index) => (
                 <div key={index} className="roi-card">
                   <div className="flex items-center justify-between mb-4">

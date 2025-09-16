@@ -45,8 +45,9 @@ export default function MermaidChart({ chart, className = '' }: MermaidChartProp
       style={{ 
         backgroundColor: 'transparent',
         borderRadius: '8px',
-        padding: '1rem',
-        overflow: 'auto'
+        padding: '0.5rem',
+        overflow: 'auto',
+        fontSize: '12px'
       }}
     />
   )

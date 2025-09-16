@@ -21,18 +21,22 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: 'Configuración de servidor incompleta' });
   }
 
-  if (password === correctPassword) {
-    res.status(200).json({ success: true });
-  } else {
-    res.status(401).json({ 
-      error: 'Contraseña incorrecta',
-      debug: {
-        hasEnvVar: !!process.env.APP_PASSWORD,
-        envVarLength: process.env.APP_PASSWORD?.length,
-        receivedLength: password?.length,
-        envVarValue: JSON.stringify(process.env.APP_PASSWORD),
-        receivedValue: JSON.stringify(password)
-      }
-    });
-  }
+              // Remove quotes from environment variable if they exist
+              const cleanPassword = correctPassword.replace(/^"(.*)"$/, '$1');
+              
+              if (password === cleanPassword) {
+                res.status(200).json({ success: true });
+              } else {
+                res.status(401).json({
+                  error: 'Contraseña incorrecta',
+                  debug: {
+                    hasEnvVar: !!process.env.APP_PASSWORD,
+                    envVarLength: process.env.APP_PASSWORD?.length,
+                    receivedLength: password?.length,
+                    envVarValue: JSON.stringify(process.env.APP_PASSWORD),
+                    receivedValue: JSON.stringify(password),
+                    cleanPassword: JSON.stringify(cleanPassword)
+                  }
+                });
+              }
 }

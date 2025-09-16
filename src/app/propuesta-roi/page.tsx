@@ -127,47 +127,51 @@ export default function PropuestaROIPage() {
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Tab Navigation */}
-        <div className="mb-8">
-          <div className="flex space-x-1 bg-white/10 rounded-lg p-1">
+        <div className="mb-6 sm:mb-8">
+          <div className="flex flex-wrap gap-1 bg-white/10 rounded-lg p-1">
             <button
               onClick={() => setActiveTab('comparativo')}
-              className={`flex-1 py-2 px-4 rounded-md text-sm font-medium transition-colors ${
+              className={`flex-1 min-w-0 py-2 px-2 sm:px-4 rounded-md text-xs sm:text-sm font-medium transition-colors ${
                 activeTab === 'comparativo'
                   ? 'bg-purple-600 text-white'
                   : 'text-white/70 hover:text-white'
               }`}
             >
-              Comparativo Planes
+              <span className="hidden sm:inline">Comparativo Planes</span>
+              <span className="sm:hidden">Planes</span>
             </button>
             <button
               onClick={() => setActiveTab('roi')}
-              className={`flex-1 py-2 px-4 rounded-md text-sm font-medium transition-colors ${
+              className={`flex-1 min-w-0 py-2 px-2 sm:px-4 rounded-md text-xs sm:text-sm font-medium transition-colors ${
                 activeTab === 'roi'
                   ? 'bg-purple-600 text-white'
                   : 'text-white/70 hover:text-white'
               }`}
             >
-              Análisis ROI
+              <span className="hidden sm:inline">Análisis ROI</span>
+              <span className="sm:hidden">ROI</span>
             </button>
             <button
               onClick={() => setActiveTab('kpis')}
-              className={`flex-1 py-2 px-4 rounded-md text-sm font-medium transition-colors ${
+              className={`flex-1 min-w-0 py-2 px-2 sm:px-4 rounded-md text-xs sm:text-sm font-medium transition-colors ${
                 activeTab === 'kpis'
                   ? 'bg-purple-600 text-white'
                   : 'text-white/70 hover:text-white'
               }`}
             >
-              Dashboard KPIs
+              <span className="hidden sm:inline">Dashboard KPIs</span>
+              <span className="sm:hidden">KPIs</span>
             </button>
             <button
               onClick={() => setActiveTab('justificacion')}
-              className={`flex-1 py-2 px-4 rounded-md text-sm font-medium transition-colors ${
+              className={`flex-1 min-w-0 py-2 px-2 sm:px-4 rounded-md text-xs sm:text-sm font-medium transition-colors ${
                 activeTab === 'justificacion'
                   ? 'bg-purple-600 text-white'
                   : 'text-white/70 hover:text-white'
               }`}
             >
-              Justificación
+              <span className="hidden sm:inline">Justificación</span>
+              <span className="sm:hidden">Justif.</span>
             </button>
           </div>
         </div>
@@ -182,7 +186,7 @@ export default function PropuestaROIPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-8">
               {/* Cortex Plan */}
               <div className="roi-card">
                 <div className="text-center mb-6">
@@ -316,7 +320,7 @@ export default function PropuestaROIPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {roiMetrics.map((metric, index) => (
                 <div key={index} className="roi-card">
                   <div className="flex items-center mb-4">
@@ -414,7 +418,7 @@ export default function PropuestaROIPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {kpis.map((kpi, index) => {
                 const progress = (kpi.current / kpi.target) * 100
                 const isPercentage = kpi.unit.includes('%')

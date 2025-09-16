@@ -67,14 +67,14 @@ export default function HomePage() {
 
   if (!isAuthenticated) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-purple-900 to-purple-600">
-        <div className="glass-effect rounded-2xl p-8 w-full max-w-md mx-4">
-          <div className="text-center mb-8">
-            <h1 className="text-3xl font-bold mora-text mb-2">Mora Real S.A.</h1>
-            <p className="text-white/80">Reporte de Inteligencia de Negocio</p>
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-purple-900 to-purple-600 p-4">
+        <div className="glass-effect rounded-2xl p-6 sm:p-8 w-full max-w-md">
+          <div className="text-center mb-6 sm:mb-8">
+            <h1 className="text-2xl sm:text-3xl font-bold mora-text mb-2">Mora Real S.A.</h1>
+            <p className="text-white/80 text-sm sm:text-base">Reporte de Inteligencia de Negocio</p>
           </div>
           
-          <form onSubmit={handleLogin} className="space-y-6">
+          <form onSubmit={handleLogin} className="space-y-4 sm:space-y-6">
             <div>
               <label htmlFor="password" className="block text-sm font-medium text-white mb-2">
                 Contraseña de Acceso
@@ -84,8 +84,9 @@ export default function HomePage() {
                 id="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent text-sm sm:text-base"
                 placeholder="Ingrese la contraseña"
+                autoComplete="current-password"
                 required
               />
             </div>
@@ -93,13 +94,13 @@ export default function HomePage() {
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white font-semibold py-2 sm:py-3 px-4 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed text-sm sm:text-base"
             >
               {isLoading ? 'Verificando...' : 'Acceder al Reporte'}
             </button>
           </form>
           
-          <div className="mt-6 text-center text-sm text-white/60">
+          <div className="mt-4 sm:mt-6 text-center text-xs sm:text-sm text-white/60">
             <p>Desarrollado por <span className="text-purple-400">aii.cr</span></p>
           </div>
         </div>
@@ -111,20 +112,21 @@ export default function HomePage() {
     <div className="min-h-screen bg-gradient-to-br from-black via-purple-900 to-purple-600">
       {/* Header */}
       <header className="glass-effect border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4">
           <div className="flex items-center justify-between">
-            <div>
-              <h1 className="text-2xl font-bold mora-text">Mora Real S.A.</h1>
-              <p className="text-white/80 text-sm">Reporte de Inteligencia de Negocio</p>
+            <div className="min-w-0 flex-1">
+              <h1 className="text-lg sm:text-xl md:text-2xl font-bold mora-text truncate">Mora Real S.A.</h1>
+              <p className="text-white/80 text-xs sm:text-sm truncate">Reporte de Inteligencia de Negocio</p>
             </div>
             <button
               onClick={() => {
                 setIsAuthenticated(false)
                 localStorage.removeItem('mora-real-auth')
               }}
-              className="text-white/60 hover:text-white transition-colors"
+              className="text-white/60 hover:text-white transition-colors text-sm sm:text-base ml-2 flex-shrink-0"
             >
-              Cerrar Sesión
+              <span className="hidden sm:inline">Cerrar Sesión</span>
+              <span className="sm:hidden">Salir</span>
             </button>
           </div>
         </div>
@@ -133,18 +135,18 @@ export default function HomePage() {
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Hero Section */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+        <div className="text-center mb-8 sm:mb-12 px-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
             Análisis de <span className="mora-text">ROI</span> y Oportunidades
           </h2>
-          <p className="text-xl text-white/80 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-white/80 max-w-3xl mx-auto">
             Evaluación integral del flujo de trabajo actual y propuesta de soluciones 
             de automatización e inteligencia artificial para optimizar operaciones
           </p>
         </div>
 
         {/* Overview Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-8 sm:mb-12">
           <div className="roi-card">
             <div className="flex items-center mb-4">
               <BuildingOfficeIcon className="h-8 w-8 text-purple-400 mr-3" />
@@ -190,7 +192,7 @@ export default function HomePage() {
         </div>
 
         {/* Navigation Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8">
           <Link href="/analisis-flujo" className="roi-card group cursor-pointer">
             <div className="flex items-center mb-4">
               <DocumentChartBarIcon className="h-10 w-10 text-purple-400 mr-4" />

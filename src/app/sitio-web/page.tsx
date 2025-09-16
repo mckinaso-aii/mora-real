@@ -118,47 +118,51 @@ export default function SitioWebPage() {
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Tab Navigation */}
-        <div className="mb-8">
-          <div className="flex space-x-1 bg-white/10 rounded-lg p-1">
+        <div className="mb-6 sm:mb-8">
+          <div className="flex flex-wrap gap-1 bg-white/10 rounded-lg p-1">
             <button
               onClick={() => setActiveTab('actual')}
-              className={`flex-1 py-2 px-4 rounded-md text-sm font-medium transition-colors ${
+              className={`flex-1 min-w-0 py-2 px-2 sm:px-4 rounded-md text-xs sm:text-sm font-medium transition-colors ${
                 activeTab === 'actual'
                   ? 'bg-purple-600 text-white'
                   : 'text-white/70 hover:text-white'
               }`}
             >
-              Sitio Actual
+              <span className="hidden sm:inline">Sitio Actual</span>
+              <span className="sm:hidden">Actual</span>
             </button>
             <button
               onClick={() => setActiveTab('propuesta')}
-              className={`flex-1 py-2 px-4 rounded-md text-sm font-medium transition-colors ${
+              className={`flex-1 min-w-0 py-2 px-2 sm:px-4 rounded-md text-xs sm:text-sm font-medium transition-colors ${
                 activeTab === 'propuesta'
                   ? 'bg-purple-600 text-white'
                   : 'text-white/70 hover:text-white'
               }`}
             >
-              Propuesta Nueva
+              <span className="hidden sm:inline">Propuesta Nueva</span>
+              <span className="sm:hidden">Nueva</span>
             </button>
             <button
               onClick={() => setActiveTab('integraciones')}
-              className={`flex-1 py-2 px-4 rounded-md text-sm font-medium transition-colors ${
+              className={`flex-1 min-w-0 py-2 px-2 sm:px-4 rounded-md text-xs sm:text-sm font-medium transition-colors ${
                 activeTab === 'integraciones'
                   ? 'bg-purple-600 text-white'
                   : 'text-white/70 hover:text-white'
               }`}
             >
-              Integraciones
+              <span className="hidden sm:inline">Integraciones</span>
+              <span className="sm:hidden">Integ.</span>
             </button>
             <button
               onClick={() => setActiveTab('competitivo')}
-              className={`flex-1 py-2 px-4 rounded-md text-sm font-medium transition-colors ${
+              className={`flex-1 min-w-0 py-2 px-2 sm:px-4 rounded-md text-xs sm:text-sm font-medium transition-colors ${
                 activeTab === 'competitivo'
                   ? 'bg-purple-600 text-white'
                   : 'text-white/70 hover:text-white'
               }`}
             >
-              Ventaja Competitiva
+              <span className="hidden sm:inline">Ventaja Competitiva</span>
+              <span className="sm:hidden">Ventaja</span>
             </button>
           </div>
         </div>
@@ -209,7 +213,7 @@ export default function SitioWebPage() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               <div className="roi-card">
                 <div className="flex items-center mb-4">
                   <DevicePhoneMobileIcon className="h-8 w-8 text-red-400 mr-3" />
@@ -363,7 +367,7 @@ export default function SitioWebPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
               {integrations.map((integration, index) => (
                 <div key={index} className="roi-card">
                   <div className="flex items-center mb-4">
@@ -427,7 +431,7 @@ export default function SitioWebPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {competitiveAdvantages.map((advantage, index) => (
                 <div key={index} className="roi-card">
                   <div className="text-center mb-4">
@@ -506,7 +510,7 @@ export default function SitioWebPage() {
                 <div className="text-3xl font-bold text-green-400 mb-4">$600-1,200/mes</div>
                 <div className="text-white/80 mb-6">Ingresos adicionales por captación online</div>
                 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                   <div>
                     <div className="text-2xl font-bold text-purple-400 mb-2">5-10</div>
                     <div className="text-white/80 text-sm">Pacientes nuevos/mes</div>
