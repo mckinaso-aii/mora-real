@@ -265,6 +265,15 @@ export default function PropuestaROIPage() {
                         </div>
                       </div>
                     </div>
+                    <div className="p-3 bg-white/10 rounded-lg">
+                      <div className="flex items-start">
+                        <span className="text-green-400 mr-2">✓</span>
+                        <div>
+                          <div className="text-white font-medium text-sm">DNS + Dominio + Email Hosting</div>
+                          <div className="text-white/60 text-xs">→ Resuelve: Infraestructura técnica completa</div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
@@ -336,6 +345,15 @@ export default function PropuestaROIPage() {
                         <div>
                           <div className="text-white font-medium text-sm">Odoo Gratuito (1 módulo)</div>
                           <div className="text-white/60 text-xs">→ Resuelve: Gestión básica de pacientes</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="p-3 bg-white/10 rounded-lg">
+                      <div className="flex items-start">
+                        <span className="text-green-400 mr-2">✓</span>
+                        <div>
+                          <div className="text-white font-medium text-sm">DNS + Dominio + Email Hosting</div>
+                          <div className="text-white/60 text-xs">→ Resuelve: Infraestructura técnica completa</div>
                         </div>
                       </div>
                     </div>
@@ -422,6 +440,15 @@ export default function PropuestaROIPage() {
                         <div>
                           <div className="text-white font-medium text-sm">Escalabilidad Completa</div>
                           <div className="text-white/60 text-xs">→ Resuelve: Preparación para crecimiento del centro médico</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="p-3 bg-white/10 rounded-lg">
+                      <div className="flex items-start">
+                        <span className="text-green-400 mr-2">✓</span>
+                        <div>
+                          <div className="text-white font-medium text-sm">DNS + Dominio + Email Hosting</div>
+                          <div className="text-white/60 text-xs">→ Resuelve: Infraestructura técnica completa</div>
                         </div>
                       </div>
                     </div>
@@ -1054,6 +1081,27 @@ export default function PropuestaROIPage() {
             </div>
 
             <div className="roi-card">
+              <h3 className="text-xl font-bold text-white mb-6 text-center">Infraestructura Técnica Completa</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-purple-400 mb-2">DNS Management</div>
+                  <div className="text-white/80 mb-2">Configuración y gestión completa</div>
+                  <div className="text-sm text-white/60">Sin costos adicionales de terceros</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-purple-400 mb-2">Domain Registrar</div>
+                  <div className="text-white/80 mb-2">Registro y renovación automática</div>
+                  <div className="text-sm text-white/60">Incluido en todos los planes</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-purple-400 mb-2">Email Hosting</div>
+                  <div className="text-white/80 mb-2">Correos profesionales del centro</div>
+                  <div className="text-sm text-white/60">@morareal.cr incluido</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="roi-card">
               <h3 className="text-xl font-bold text-white mb-6 text-center">Valor Agregado vs Competencia</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="text-center">
@@ -1078,7 +1126,7 @@ export default function PropuestaROIPage() {
               <h3 className="text-xl font-bold text-white mb-6 text-center">Justificación de Mantenimiento</h3>
               <div className="text-center">
                 <div className="text-3xl font-bold text-green-400 mb-4">$395/mes Neural</div>
-                <div className="text-white/80 mb-6">Incluye: hosting, BI dashboards, Odoo ERP/CRM, WhatsApp API, sitio web, soporte AI model</div>
+                <div className="text-white/80 mb-6">Incluye: hosting, DNS, dominio, email hosting, BI dashboards, Odoo ERP/CRM, WhatsApp API, sitio web, soporte AI model</div>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>

@@ -72,8 +72,8 @@ export default function SitioWebPage() {
       benefit: "Mejor toma de decisiones"
     },
     {
-      name: "Inventario Farmacia",
-      description: "Control de stock integrado con alertas automáticas",
+      name: "Proveeduría Inteligente",
+      description: "Control de stock integrado con alertas automáticas para farmacia y suministros médicos",
       benefit: "Reduce desperdicio en 10%"
     }
   ]
