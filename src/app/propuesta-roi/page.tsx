@@ -7,6 +7,30 @@ import Link from 'next/link'
 export default function PropuestaROIPage() {
   const [activeTab, setActiveTab] = useState('comparativo')
 
+  const bridgePlan = {
+    name: "Bridge",
+    price: 795,
+    maintenance: 195,
+    features: [
+      "AI Conversacional WhatsApp automático",
+      "Bridge API: Dentalink ↔ Huli Practice",
+      "Dashboard BI básico (5 KPIs)",
+      "Web simple integrada con Dentalink"
+    ],
+    limitations: [
+      "Mantiene sistemas actuales (Huli + Dentalink)",
+      "No resuelve expedientes híbridos",
+      "KPIs básicos, no adaptativos",
+      "Sin escalabilidad a farmacia",
+      "Requiere migración futura para crecimiento"
+    ],
+    roi: {
+      monthly: 1200,
+      annual: 14400,
+      net: 405 // 1200 - 795
+    }
+  }
+
   const cortexPlan = {
     name: "Cortex",
     price: 795,
@@ -181,13 +205,90 @@ export default function PropuestaROIPage() {
         {activeTab === 'comparativo' && (
           <div className="space-y-8">
             <div className="text-center mb-8">
-              <h2 className="text-3xl font-bold text-white mb-4">Comparativo Cortex vs Neural</h2>
-              <p className="text-xl text-white/80 max-w-3xl mx-auto">
-                Cortex: Mejoras dentales inmediatas vs Neural: Dental + escalabilidad a centro médico completo
+              <h2 className="text-3xl font-bold text-white mb-4">Comparativo de Planes</h2>
+              <p className="text-xl text-white/80 max-w-4xl mx-auto">
+                Bridge: Mantén sistemas actuales + automatización | Cortex: Nuevo sistema dental | Neural: Centro médico completo
               </p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6">
+              {/* Bridge Plan */}
+              <div className="roi-card border-2 border-green-500">
+                <div className="text-center mb-6">
+                  <div className="inline-block bg-green-600 text-white px-3 py-1 rounded-full text-sm font-medium mb-2">
+                    BAJO RIESGO
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-2">Plan Bridge</h3>
+                  <div className="text-3xl font-bold text-green-400 mb-2">$795/mes</div>
+                  <div className="text-white/60">+ $195/mes mantenimiento (después de 3 meses)</div>
+                  <div className="mt-2 px-3 py-1 bg-green-500/20 border border-green-500/50 rounded-full">
+                    <span className="text-green-400 text-sm font-medium">Compromiso mínimo: 3 meses</span>
+                  </div>
+                </div>
+
+                <div className="mb-6">
+                  <h4 className="text-lg font-semibold text-white mb-3">Mantén Sistemas Actuales:</h4>
+                  <div className="space-y-3">
+                    <div className="p-3 bg-white/10 rounded-lg">
+                      <div className="flex items-start">
+                        <span className="text-green-400 mr-2">✓</span>
+                        <div>
+                          <div className="text-white font-medium text-sm">AI Conversacional WhatsApp</div>
+                          <div className="text-white/60 text-xs">→ Resuelve: Recordatorios manuales (ahorro $240/mes)</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="p-3 bg-white/10 rounded-lg">
+                      <div className="flex items-start">
+                        <span className="text-green-400 mr-2">✓</span>
+                        <div>
+                          <div className="text-white font-medium text-sm">Bridge API Integration</div>
+                          <div className="text-white/60 text-xs">→ Resuelve: Duplicidad Dentalink ↔ Huli</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="p-3 bg-white/10 rounded-lg">
+                      <div className="flex items-start">
+                        <span className="text-green-400 mr-2">✓</span>
+                        <div>
+                          <div className="text-white font-medium text-sm">Dashboard BI Básico</div>
+                          <div className="text-white/60 text-xs">→ Resuelve: Visibilidad unificada</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="p-3 bg-white/10 rounded-lg">
+                      <div className="flex items-start">
+                        <span className="text-green-400 mr-2">✓</span>
+                        <div>
+                          <div className="text-white font-medium text-sm">Web Integrada Dentalink</div>
+                          <div className="text-white/60 text-xs">→ Resuelve: Agenda online sin cambios</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mb-6">
+                  <h4 className="text-lg font-semibold text-white mb-3">Limitaciones:</h4>
+                  <ul className="space-y-2">
+                    {bridgePlan.limitations.map((limitation, index) => (
+                      <li key={index} className="flex items-start">
+                        <span className="text-yellow-400 mr-2">⚠</span>
+                        <span className="text-white/80 text-sm">{limitation}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="border-t border-white/20 pt-4">
+                  <div className="text-center">
+                    <div className="text-sm text-white/60 mb-1">ROI Estimado</div>
+                    <div className="text-xl font-bold text-green-400">$405/mes neto</div>
+                    <div className="text-sm text-white/60">($1,200 ingresos - $795 costo)</div>
+                  </div>
+                </div>
+              </div>
+
               {/* Cortex Plan */}
               <div className="roi-card">
                 <div className="text-center mb-6">
@@ -368,19 +469,19 @@ export default function PropuestaROIPage() {
               <h3 className="text-xl font-bold text-white mb-6 text-center">Resumen Comparativo</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="text-center">
+                  <div className="text-2xl font-bold text-green-400 mb-2">Bridge</div>
+                  <div className="text-white/80 mb-2">Sistemas Actuales</div>
+                  <div className="text-sm text-white/60">Bajo riesgo, mantiene Huli + Dentalink</div>
+                </div>
+                <div className="text-center">
                   <div className="text-2xl font-bold text-blue-400 mb-2">Cortex</div>
-                  <div className="text-white/80 mb-2">Solo Dental</div>
-                  <div className="text-sm text-white/60">Mejoras básicas, sin escalabilidad</div>
+                  <div className="text-white/80 mb-2">Nuevo Sistema Dental</div>
+                  <div className="text-sm text-white/60">Fresh start con Odoo dental</div>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-purple-400 mb-2">Neural</div>
-                  <div className="text-white/80 mb-2">Dental + Centro Médico</div>
+                  <div className="text-white/80 mb-2">Centro Médico Completo</div>
                   <div className="text-sm text-white/60">Escalabilidad completa a su negocio</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-green-400 mb-2">Diferencia</div>
-                  <div className="text-white/80 mb-2">$1,550/mes</div>
-                  <div className="text-sm text-white/60">ROI adicional con Neural vs Cortex</div>
                 </div>
               </div>
             </div>
@@ -489,7 +590,21 @@ export default function PropuestaROIPage() {
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                <div className="text-center p-4 bg-green-500/10 rounded-lg border border-green-500/30">
+                  <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <span className="text-white text-xl font-bold">3</span>
+                  </div>
+                  <h4 className="text-lg font-semibold text-white mb-2">Plan Bridge</h4>
+                  <p className="text-white/70 text-sm mb-3">Compromiso mínimo: 3 meses</p>
+                  <div className="text-xs text-white/60">
+                    <p className="mb-1">• Inversión total: $2,970</p>
+                    <p className="mb-1">• ROI esperado: $1,215</p>
+                    <p className="mb-1">• Tiempo de recuperación: 2.4 meses</p>
+                    <p>• Mantenimiento: $195/mes (después de 3 meses)</p>
+                  </div>
+                </div>
+
                 <div className="text-center p-4 bg-orange-500/10 rounded-lg border border-orange-500/30">
                   <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-3">
                     <span className="text-white text-xl font-bold">3</span>
